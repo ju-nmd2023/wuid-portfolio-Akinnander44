@@ -6,12 +6,24 @@ body {
 }
 
 
+
+@media screen and (max-width: 844px) {
+  .desktopOnly {
+    display: none;
+  }
+}
+
 .form_container {
 display: flex;
 flex-direction: column;
 max-width: 70%;
 margin: auto;
 border-right: 25px solid #ffffff00;
+}
+
+
+div.header {
+  margin: auto;
 }
 
 
