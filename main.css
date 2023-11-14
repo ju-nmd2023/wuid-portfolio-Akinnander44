@@ -1,3 +1,5 @@
+/* Body */
+
 body {
   /* Here i link a image hosted somewhere on the web which i assume has drawbacks, for example it could be removed at any time */
   background: url(https://media1.giphy.com/media/WJmngXIazXPzV5NcMH/200w.gif?cid=6c09b9520arxg5xk78m20q2jtz7jcxepi4i1pghar1xuwmed&ep=v1_gifs_search&rid=200w.gif&ct=g);
@@ -5,28 +7,74 @@ body {
   margin:auto;
 }
 
-
-
-@media screen and (max-width: 844px) {
+  /* Media Queries*/
+    /* Header gif*/
+@media screen and (max-width: 888px) {
   .desktopOnly {
     display: none;
   }
 }
-
-.form_container {
-display: flex;
-flex-direction: column;
-max-width: 70%;
-margin: auto;
-border-right: 25px solid #ffffff00;
+    /* Portfolio attachments */
+@media screen and (max-width: 444px) {
+  .desktopOnlySmaller {
+    display: none;
+  }
 }
 
 
-div.header {
+.portfolio-grid{
+  display:grid;
+  grid-template-columns: 200px 200px 200px;
+  column-gap: 50px;
+  overflow: hidden;
+}
+
+.grid-media{
+  object-fit: cover;
+}
+
+
+
+
+/* Header */
+
+header {
+  background-image: linear-gradient(rgb(19, 44, 104), purple);
+  padding: 10px;
+  margin: 10px;
+  /* Used a example on here to figuire out distributign elements with flex */
+  justify-content: space-between;
+  display: flex;
+  color: yellowgreen;
+
+  border: 10px solid purple;
+}
+
+section.header {
   margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav{
+  text-align: center;
+  margin: 10pt 20pt 10pt 20pt
+}
+
+div.smallBanners{
+ margin: auto;
+}
+
+/* Footer */
+p.footer {
+  text-align: center;
+  color: yellowgreen;
 }
 
 
+
+/* Contact Form */
 input.form,textarea.form {
   width: 100%;
   padding: 11px 11px;
@@ -35,7 +83,7 @@ input.form,textarea.form {
   margin-bottom: 11px;
   font-family: sans-serif;
   border: solid 2px yellowgreen;
-  resize: vertical;
+  resize:vertical;
   
 }
 textarea:focus-within, input:focus-within {
@@ -67,40 +115,21 @@ button:hover:enabled{
   cursor: pointer;
 }
 
+.form_container {
+display: flex;
+flex-direction: column;
+max-width: 70%;
+margin: auto;
+border-right: 25px solid #ffffff00;
+}
+
 .tos {
   margin: auto;
 }
 
-
-header {
-  background-image: linear-gradient(rgb(19, 44, 104), purple);
-  padding: 10px;
-  margin: 10px auto;
-  /* Used a example on here to figuire out distributign elements with flex */
-  justify-content: space-between;
-  display: flex;
-  color: yellowgreen;
-
-  border: 10px solid purple;
-}
-
-.container {
-  background: white;
-  border: 10px solid purple;
-  padding: 0px 40px px 40px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  flex-grow:1;
-  flex-shrink:2;
-  flex-basis: auto;
-}
-.container p, .container h3 {
-  text-align: left;
-  margin: 10pt 20pt 10pt 20pt
-}
-.container p {
-  color: blue;
+/* Text styles */
+h1{
+font-size: 2em;
 }
 
 h1,h2 {
@@ -108,6 +137,37 @@ h1,h2 {
   text-align: center;
 }
 
+.container p {
+  color: blue;
+}
+
+.container p, .container h3 {
+  text-align: left;
+  margin: 10pt 20pt 10pt 20pt
+}
+
+/* General page layout */
+.container {
+  background: white;
+  border: 10px solid purple;
+  padding: 0px 40px px 40px;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+  flex-shrink:2;
+  flex-basis: auto;
+}
+
+div.inner {
+  margin:auto;
+  width:700px;
+  max-width: 90%;
+  margin-bottom: 25px;
+}
+
+
+/* Links */
 a {
   text-align: center;
   color: yellowgreen;
@@ -116,6 +176,8 @@ a:hover {
   color: yellow;
   font-weight: 900;
 }
+
+/* Attachments */
 
 img {
   object-fit: scale-down;
@@ -129,6 +191,7 @@ img.image-contain {
   height: 200px;
   padding-left: 15px;
   margin-right: 20pt;
+  float: right;
   /* padding-top: -10px; */
 }
 
@@ -141,7 +204,3 @@ img.image-contain {
   width: 300px;
 }
 
-p.footer {
-  text-align: center;
-  color: yellowgreen;
-}
