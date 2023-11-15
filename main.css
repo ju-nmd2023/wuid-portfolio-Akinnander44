@@ -70,31 +70,40 @@ body {
     ". . . text text text text text text "
    ; */
    grid-template-areas: 
-   "img img title"
-   "img img sub"
+   "img img head"
+   /* "img img head" */
+   /* "img img head" */
    "text text text"
    "text text text"
    ;
 }
 
+.grid-head {
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  grid-area: head;
+}
+
+
 .grid-img {
-  grid-area: img;
-  width: 100%;
+  /* grid-area: img; */
+  width: 200%;
   object-fit: contain;
 
 }
 
 .grid-title {
-  grid-area: title;
   margin-top: auto;
+  margin-bottom: 0px;
   margin-left: .5em;
   margin-right: 0px;
   text-align: left;  
-  font-size: 29pt;
+  font-size: 26pt;
+  line-height: 29pt;
 }
 
 .grid-sub{
-grid-area: sub;
 font-size: 14pt;
 color: darkgray;
 font-weight: 300;
