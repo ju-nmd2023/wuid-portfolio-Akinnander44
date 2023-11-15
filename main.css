@@ -51,6 +51,8 @@ body {
   background: #fff;
 }
 
+/* Work information page */
+
 .grid-information {
   width: 90%;
   margin: auto;
@@ -86,8 +88,9 @@ body {
   grid-area: title;
   margin-top: auto;
   margin-left: .5em;
+  margin-right: 0px;
   text-align: left;  
-  font-size: 4cap;
+  font-size: 29pt;
 }
 
 .grid-sub{
