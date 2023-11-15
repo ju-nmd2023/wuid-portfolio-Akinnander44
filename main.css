@@ -4,37 +4,45 @@ body {
   /* Here i link a image hosted somewhere on the web which i assume has drawbacks, for example it could be removed at any time */
   background: url(https://media1.giphy.com/media/WJmngXIazXPzV5NcMH/200w.gif?cid=6c09b9520arxg5xk78m20q2jtz7jcxepi4i1pghar1xuwmed&ep=v1_gifs_search&rid=200w.gif&ct=g);
   background-attachment: fixed;
-  margin:auto;
+  margin: auto;
 }
 
-  /* Media Queries*/
-    /* Header gif*/
+/* Media Queries*/
+/* Header gif*/
 @media screen and (max-width: 888px) {
   .desktopOnly {
     display: none;
   }
 }
-    /* Portfolio attachments */
+/* Portfolio attachments */
 @media screen and (max-width: 444px) {
   .desktopOnlySmaller {
     display: none;
   }
 }
 
-
-.portfolio-grid{
-  display:grid;
-  grid-template-columns: 200px 200px 200px;
-  column-gap: 50px;
-  overflow: hidden;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  gap: 2em;
 }
 
-.grid-media{
-  object-fit: cover;
+.grid-media {
+  border: 2px solid yellowgreen;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: fill;
 }
 
-
-
+.grid-media:hover {
+  border: 5px solid purple;
+  width: 80%;
+  height: 80%;
+  transition: 1s ease;
+  background: #fff;
+}
 
 /* Header */
 
@@ -57,13 +65,13 @@ section.header {
   flex-direction: column;
 }
 
-nav{
+nav {
   text-align: center;
-  margin: 10pt 20pt 10pt 20pt
+  margin: 10pt 20pt 10pt 20pt;
 }
 
-div.smallBanners{
- margin: auto;
+div.smallBanners {
+  margin: auto;
 }
 
 /* Footer */
@@ -72,10 +80,9 @@ p.footer {
   color: yellowgreen;
 }
 
-
-
 /* Contact Form */
-input.form,textarea.form {
+input.form,
+textarea.form {
   width: 100%;
   padding: 11px 11px;
   border-radius: 19px;
@@ -83,15 +90,15 @@ input.form,textarea.form {
   margin-bottom: 11px;
   font-family: sans-serif;
   border: solid 2px yellowgreen;
-  resize:vertical;
-  
+  resize: vertical;
 }
-textarea:focus-within, input:focus-within {
-  Border: solid 2px Purple;
+textarea:focus-within,
+input:focus-within {
+  border: solid 2px Purple;
   outline: none;
-  color:#000;
+  color: #000;
 }
-button{
+button {
   border-radius: 19px;
   padding: 3px 11px;
   color: #fff;
@@ -101,14 +108,14 @@ button{
   display: flex;
   margin: auto;
   margin-bottom: 11px;
-  border: solid 1px whitesmoke
+  border: solid 1px whitesmoke;
 }
 
-button:enabled{
+button:enabled {
   background-image: linear-gradient(#9acd32, rgb(125, 187, 0));
 }
 
-button:hover:enabled{
+button:hover:enabled {
   background-image: none;
   background-color: purple;
   color: #fff;
@@ -116,11 +123,11 @@ button:hover:enabled{
 }
 
 .form_container {
-display: flex;
-flex-direction: column;
-max-width: 70%;
-margin: auto;
-border-right: 25px solid #ffffff00;
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: auto;
+  border-right: 25px solid #ffffff00;
 }
 
 .tos {
@@ -128,11 +135,12 @@ border-right: 25px solid #ffffff00;
 }
 
 /* Text styles */
-h1{
-font-size: 2em;
+h1 {
+  font-size: 2em;
 }
 
-h1,h2 {
+h1,
+h2 {
   font-family: "Teko", sans-serif;
   text-align: center;
 }
@@ -141,9 +149,10 @@ h1,h2 {
   color: blue;
 }
 
-.container p, .container h3 {
+.container p,
+.container h3 {
   text-align: left;
-  margin: 10pt 20pt 10pt 20pt
+  margin: 10pt 20pt 10pt 20pt;
 }
 
 /* General page layout */
@@ -154,18 +163,18 @@ h1,h2 {
   margin: 0px 10px;
   display: flex;
   flex-direction: column;
-  flex-grow:1;
-  flex-shrink:2;
+  flex-grow: 1;
+  flex-shrink: 2;
   flex-basis: auto;
 }
 
 div.inner {
-  margin:auto;
-  width:700px;
+  margin: auto;
+  width: 700px;
   max-width: 90%;
   margin-bottom: 25px;
+  padding-top: 3em;
 }
-
 
 /* Links */
 a {
@@ -178,12 +187,6 @@ a:hover {
 }
 
 /* Attachments */
-
-img {
-  object-fit: scale-down;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-}
 
 img.image-contain {
   /* float:right; */
@@ -203,4 +206,3 @@ img.image-contain {
   max-width: fit-content;
   width: 300px;
 }
-
