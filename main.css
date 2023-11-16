@@ -58,6 +58,7 @@ body {
   margin: auto;
   margin-top: 5em;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-areas:
     "img img img img title title title title title "
     "img img img img text text text text text "
@@ -69,47 +70,49 @@ body {
     ". . . text text text text text text "
     ". . . text text text text text text "
    ; */
-   grid-template-areas: 
-   "img img head"
-   /* "img img head" */
-   /* "img img head" */
-   "text text text"
-   "text text text"
-   ;
+  grid-template-areas:
+    "img img head"
+    /* "img img head" */
+    /* "img img head" */
+    "text text text"
+    "text text text";
 }
 
 .grid-head {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   grid-area: head;
+  /* grid-column: 1fr; */
+  /* padding-left: 0rem; */
 }
 
-
 .grid-img {
-  /* grid-area: img; */
-  width: 200%;
+  grid-area: img;
+  width: 100%;
   object-fit: contain;
-
+  /* position: static; */
 }
 
 .grid-title {
   margin-top: auto;
   margin-bottom: 0px;
-  margin-left: .5em;
+  margin-left: 0.4em;
   margin-right: 0px;
-  text-align: left;  
+  text-align: left;
   font-size: 26pt;
-  line-height: 29pt;
+  line-height: 24pt;
 }
 
-.grid-sub{
-font-size: 14pt;
-color: darkgray;
-font-weight: 300;
-text-align: left;
-margin-left: 1em;
-margin-top: 0px;
+.grid-sub {
+  font-size: 11pt;
+  color: darkgray;
+  font-weight: 300;
+  text-align: left;
+  line-height: 11pt;
+  margin-left: 1em;
+  margin-top: 0px;
+  margin-bottom: 1pt;
 }
 .grid-text {
   grid-area: text;
