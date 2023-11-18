@@ -1,64 +1,282 @@
+/* Body */
+
 body {
-  /* background-color: rgb(70, 69, 20); */
-  background-image: linear-gradient(0.88turn,hsl(200, 35%, 25%),hsl(90, 14%, 3%));
-  /* background-image: linear-gradient(hsl(251, 100%, 10%),hsl(0, 0%, 0%)); */
+  /* Here i link a image hosted somewhere on the web which i assume has drawbacks, for example it could be removed at any time */
+  background: url(https://media1.giphy.com/media/WJmngXIazXPzV5NcMH/200w.gif?cid=6c09b9520arxg5xk78m20q2jtz7jcxepi4i1pghar1xuwmed&ep=v1_gifs_search&rid=200w.gif&ct=g);
   background-attachment: fixed;
-  margin: .3rem .8rem 9rem .3rem;
-  /* overflow-y: scroll; */
-  /* scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-scrollbar: */
-  
+  margin: auto;
 }
 
-section.page {
-  height: 100rem;
+/* Media Queries*/
+/* Header gif*/
+@media screen and (max-width: 888px) {
+  .desktopOnly {
+    display: none;
+  }
 }
-.page {
-  display: flex;
-  width:100%;
-  /* background-image: linear-gradient(rgb(255, 255, 255),rgb(255, 252, 245)); */
-  background-color: #fff;
-  margin:auto;
-  margin-bottom: .3rem;
-  box-shadow: .2rem .2rem 3rem #ffffff0c;
-
-}
-
-.rounded {
-  border-radius: 1rem;
-  border: 3pt rgb(236, 236, 236) solid;
+/* Portfolio attachments */
+@media screen and (max-width: 444px) {
+  .desktopOnlySmaller {
+    display: none;
+  }
 }
 
-header {
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  gap: 1em;
+  margin: auto;
+}
+/* Why does this need to be placed here, refuses to work placed earlier in code */
+@media screen and (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid-media {
+  border: 2px solid yellowgreen;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: fill;
+  cursor: pointer;
+}
+.grid-media:hover {
+  border: 5px solid purple;
+  width: 80%;
+  height: 80%;
+  transition: 1s ease;
+  background: #fff;
+}
+
+/* Work information page */
+
+.grid-information {
+  width: 90%;
+  margin: auto;
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-areas:
+    "img img img img title title title title title "
+    "img img img img text text text text text "
+    "img img img img text text text text text "
+    "alt alt alt text text text text text text "
+    ". . . text text text text text text "
+    ". . . text text text text text text "
+    ". . . text text text text text text "
+    ". . . text text text text text text "
+    ". . . text text text text text text "
+   ; */
+  grid-template-areas:
+    "img img head"
+    /* "img img head" */
+    /* "img img head" */
+    "text text text"
+    "text text text";
+}
+
+.grid-head {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  width: 100%;
+  grid-area: head;
+  /* grid-column: 1fr; */
+  /* padding-left: 0rem; */
+}
+
+.grid-img {
+  grid-area: img;
+  width: 100%;
+  object-fit: contain;
+  /* position: static; */
+}
+
+.grid-title {
+  margin-top: auto;
+  margin-bottom: 0px;
+  margin-left: 0.4em;
+  margin-right: 0px;
+  text-align: left;
+  font-size: 26pt;
+  line-height: 24pt;
+}
+
+.grid-sub {
+  font-size: 11pt;
+  color: darkgray;
+  font-weight: 300;
+  text-align: left;
+  line-height: 11pt;
+  margin-left: 1em;
+  margin-top: 0px;
+  margin-bottom: 1pt;
+}
+.grid-text {
+  grid-area: text;
+  margin-left: 0px;
+}
+
+/* Header */
+
+header {
+  background-image: linear-gradient(rgb(19, 44, 104), purple);
+  padding: 10px;
+  margin: 10px;
+  /* Used a example on here to figuire out distributign elements with flex */
+  justify-content: space-between;
+  display: flex;
+  color: yellowgreen;
+
+  border: 10px solid purple;
+}
+
+section.header {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
-  display: flex;
-  height: 5rem;
-  flex-direction: row; 
-  /* background: red; */
-  border-radius: 0rem 1rem 1rem 0rem;
-  margin-right: 10vw;
-}
-
-input {
-  height: 100%;
-  border: 0px #fff solid;
-  border-left: 3pt  rgb(243, 243, 243)  solid;
-  background:none;
-  font-size: 1.6rem;
-  color:rgb(94, 108, 110);
   text-align: center;
-  padding: 0rem 1rem 0rem 1rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 5000;
-  /* background-color: red; */
+  margin: 10pt 20pt 10pt 20pt;
 }
 
-input:last-child {
-    border-right: 3pt  rgb(243, 243, 243)  solid;
+div.smallBanners {
+  margin: auto;
+}
+
+/* Footer */
+p.footer {
+  text-align: center;
+  color: yellowgreen;
+}
+
+/* Contact Form */
+input.form,
+textarea.form {
+  width: 100%;
+  padding: 11px 11px;
+  border-radius: 19px;
+  background-color: aliceblue;
+  margin-bottom: 11px;
+  font-family: sans-serif;
+  border: solid 2px yellowgreen;
+  resize: vertical;
+}
+textarea:focus-within,
+input:focus-within {
+  border: solid 2px Purple;
+  outline: none;
+  color: #000;
+}
+button {
+  border-radius: 19px;
+  padding: 3px 11px;
+  color: #fff;
+  background-color: lightgray;
+  border-width: 1px;
+  font-family: sans-serif;
+  display: flex;
+  margin: auto;
+  margin-bottom: 11px;
+  border: solid 1px whitesmoke;
+}
+
+button:enabled {
+  background-image: linear-gradient(#9acd32, rgb(125, 187, 0));
+}
+
+button:hover:enabled {
+  background-image: none;
+  background-color: purple;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: auto;
+  border-right: 25px solid #ffffff00;
+}
+
+.tos {
+  margin: auto;
+}
+
+/* Text styles */
+h1 {
+  font-size: 2em;
+}
+
+h1,
+h2 {
+  font-family: "Teko", sans-serif;
+  text-align: center;
+}
+
+.container p {
+  color: blue;
+}
+
+.container p,
+.container h3 {
+  text-align: left;
+  margin: 10pt 20pt 10pt 20pt;
+}
+
+/* General page layout */
+.container {
+  background: white;
+  border: 10px solid purple;
+  padding: 0px 40px px 40px;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: auto;
+}
+
+div.inner {
+  margin: auto;
+  width: 700px;
+  max-width: 90%;
+  margin-bottom: 5em;
+}
+
+/* Links */
+a {
+  text-align: center;
+  color: yellowgreen;
+}
+a:hover {
+  color: yellow;
+  font-weight: 900;
+}
+
+/* Attachments */
+
+img.image-contain {
+  /* float:right; */
+  object-fit: contain;
+  height: 200px;
+  padding-left: 15px;
+  margin-right: 20pt;
+  float: right;
+  /* padding-top: -10px; */
+}
+
+.portfolio {
+  height: 250px;
+}
+
+.article {
+  max-width: fit-content;
+  width: 300px;
 }

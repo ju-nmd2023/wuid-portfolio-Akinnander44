@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antons Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="img/groke.gif" class="desktopOnly" />
+      <section class="header">
+        <h1 class="header">Welcome to Antons Portfolio!</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="smallBanners">
+          <img src="img/ie_logo.gif" />
+          <img class="desktopOnlySmaller" src="img/notepad.gif" />
+          <img src="img/ns_logo.gif" />
+        </div>
+      </section>
+      <img src="img/groke.gif" class="desktopOnly" />
+    </header>
+
+    <section class="container">
+      <div class="inner">
+        <div class="form_container">
+          <h1>Contact me</h1>
+          <!-- https://www.w3schools.com/html/html_form_attributes.asp -->
+          <!-- https://www.w3schools.com/css/css_form.asp -->
+
+          <input type="text" name="name" placeholder="Name" class="form" />
+          <input
+            type="text"
+            name="Subject"
+            placeholder="Subject"
+            class="form"
+          />
+          <input
+            type="text"
+            name="Email"
+            placeholder="Email"
+            required
+            class="form"
+          />
+          <textarea
+            rows="5"
+            cols="60"
+            name="message"
+            placeholder="Enter text..."
+            autocomplete="off"
+            class="form"
+          ></textarea>
+          <!-- User @BalusC https://stackoverflow.com/questions/2906582/how-do-i-create-an-html-button-that-acts-like-a-link -->
+          <div class="tos">
+            <!-- Make checkbox toggle button https://stackoverflow.com/questions/18110865/how-to-disable-enable-a-button-with-a-checkbox-if-checked -->
+            <p>
+              <input
+                type="checkbox"
+                name="tos"
+                id="checkbox"
+                onchange="document.getElementById('contactFormSend').disabled = !this.checked;"
+              />
+              I agree to the <a href="tos.html" target="”_blank”">terms</a>
+            </p>
+          </div>
+          <form action="contact.html">
+            <button type="submit" id="contactFormSend" disabled>Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <p class="footer">
+      This Web page is created and maintained by Anton Kinnander.
+    </p>
+  </body>
+</html>
