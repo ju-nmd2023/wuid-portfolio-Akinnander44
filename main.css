@@ -7,6 +7,117 @@ body {
   margin: auto;
 }
 
+/* Assignment 5 */
+.radio {
+  display:flex;
+  flex-direction: column;
+}
+
+.btnContainer {
+  background-color: purple;
+  border-right: purple solid 8px;
+}
+
+.next {
+  object-fit: fill;
+  margin:auto;
+  width:100%;
+}
+
+#radioBtn{
+  /* display:flex; */
+  /* margin: auto; */
+  height:74px;
+  width: 74px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(100, 134, 33));
+  background-color: yellowgreen;
+  color:#fff;
+  font-family: "Teko", sans-serif;
+  font-size: 3rem;
+  border: .4rem outset yellowgreen  ;
+  padding:0;
+  margin: auto;
+  transition: .11s;
+  border-radius: 0%;
+}
+
+
+
+#radioBtn:hover {
+  background-image: linear-gradient(rgb(119, 0, 119), rgb(80, 0, 80));
+  background-color: purple;
+  color:#fff;
+  border: .4rem outset rgb(160, 0, 160);
+  transition: .33s;
+  
+}
+
+#radioBtn:active{
+  border: .6rem outset rgb(111, 0, 111);
+  transition: .08s;
+  padding: 0px;
+  font-size: 2.7rem;
+  background-image: linear-gradient(rgb(100, 2, 100), rgba(44, 0, 44, 0.63));
+  background-color: rgb(121, 0, 121);
+  text-align: center;
+  text-wrap: none;
+}
+
+/* Assignment 4 */
+.news {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+section.news {
+  display:flex;
+  flex-direction: row;
+}
+
+div.scroll {
+  width: auto;
+  display: flex;
+  overflow: hidden;
+  width:100%;
+  /* border-left: 10px solid purple; */
+
+}
+
+H2.news {
+  animation: 59s linear 0s infinite running news-scroll;
+  /* https://css-tricks.com/almanac/properties/w/whitespace/#:~:text=If%20you%20want%20to%20prevent,line%20(in%20the%20code). */
+  white-space: nowrap;
+  color: yellowgreen;
+  /* text-shadow: 0 0 1px #65ff46; */
+  /* width:auto; */
+  width: auto;
+}
+
+/* Make it never be blank - ideally start at the edge, or past the edge. achieve perfectr loop possible or not? Rem is good, even speed every screen size*/
+/* RRÖ INGET DET FUNKAR GANSKA BRA YES KONSTIG LÖSNING GJORDE GRID  */
+@keyframes news-scroll {
+  0% {
+    margin-right: -300rem;
+  }
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -300rem;
+  }
+}
+
 /* Media Queries*/
 /* Header gif*/
 @media screen and (max-width: 888px) {
@@ -29,7 +140,7 @@ body {
   margin: auto;
 }
 /* Why does this need to be placed here, refuses to work placed earlier in code */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 444px) {
   .portfolio-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -58,7 +169,6 @@ body {
   margin: auto;
   margin-top: 5em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-areas:
     "img img img img title title title title title "
     "img img img img text text text text text "
@@ -83,36 +193,31 @@ body {
   flex-direction: column;
   width: 100%;
   grid-area: head;
-  /* grid-column: 1fr; */
-  /* padding-left: 0rem; */
 }
 
 .grid-img {
-  grid-area: img;
-  width: 100%;
+  /* grid-area: img; */
+  width: 200%;
   object-fit: contain;
-  /* position: static; */
 }
 
 .grid-title {
   margin-top: auto;
   margin-bottom: 0px;
-  margin-left: 0.4em;
+  margin-left: 0.5em;
   margin-right: 0px;
   text-align: left;
   font-size: 26pt;
-  line-height: 24pt;
+  line-height: 29pt;
 }
 
 .grid-sub {
-  font-size: 11pt;
+  font-size: 14pt;
   color: darkgray;
   font-weight: 300;
   text-align: left;
-  line-height: 11pt;
   margin-left: 1em;
   margin-top: 0px;
-  margin-bottom: 1pt;
 }
 .grid-text {
   grid-area: text;
@@ -171,8 +276,8 @@ textarea:focus-within,
 input:focus-within {
   border: solid 2px Purple;
   outline: none;
-  color: #000;
-}
+  color: #000; }
+
 button {
   border-radius: 19px;
   padding: 3px 11px;
@@ -231,11 +336,14 @@ h2 {
 }
 
 /* General page layout */
-.container {
+.page {
   background: white;
+}
+
+.container {
   border: 10px solid purple;
   padding: 0px 40px px 40px;
-  margin: 0px 10px;
+  margin: 0px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -245,19 +353,26 @@ h2 {
 
 div.inner {
   margin: auto;
-  width: 700px;
-  max-width: 90%;
+  /* max-width: 95%; */
+  max-width: 50rem;
+  width: 100%;
   margin-bottom: 5em;
 }
 
 /* Links */
-a {
+a.nav{
   text-align: center;
   color: yellowgreen;
+  text-decoration: underline;
 }
 a:hover {
   color: yellow;
   font-weight: 900;
+  text-decoration: underline;
+}
+a{
+  color: yellowgreen;
+  text-decoration: none;
 }
 
 /* Attachments */
