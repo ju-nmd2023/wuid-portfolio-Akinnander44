@@ -5,7 +5,7 @@
 window.onload = function () {
   const radioBtn = document.getElementById("radioBtn");
   const newsText = document.getElementById("newsText");
-  let i = Math.floor(Math.random()*3);
+  let i = Math.floor(Math.random()*2) +1;
 
   function changeStation() {
     // alert("station changed");
