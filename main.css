@@ -87,11 +87,29 @@ H2.news {
   animation: 59s linear 0s infinite running news-scroll;
   /* https://css-tricks.com/almanac/properties/w/whitespace/#:~:text=If%20you%20want%20to%20prevent,line%20(in%20the%20code). */
   white-space: nowrap;
-  color: yellowgreen;
-  /* text-shadow: 0 0 1px #65ff46; */
-  /* width:auto; */
-  width: auto;
+  width:auto;
 }
+
+a{
+  color:inherit;
+}
+
+.green{
+  color: yellowgreen;
+  text-shadow: 0 0 11px rgba(137, 192, 126, 0.651);
+}
+
+.orange{
+color:rgb(255, 177, 32);
+text-shadow: 0 0 11px rgba(201, 135, 91, 0.685);
+}
+
+.pink{
+  color:hotpink;
+  text-shadow: 0 0 11px rgba(201, 91, 164, 0.699);
+}
+
+
 
 /* Make it never be blank - ideally start at the edge, or past the edge. achieve perfectr loop possible or not? Rem is good, even speed every screen size*/
 /* RRÖ INGET DET FUNKAR GANSKA BRA YES KONSTIG LÖSNING GJORDE GRID  */
@@ -325,8 +343,8 @@ h2 {
   text-align: center;
 }
 
-.container p {
-  color: blue;
+p{
+  /* color: blue; */
 }
 
 .container p,
@@ -371,7 +389,7 @@ a:hover {
   text-decoration: underline;
 }
 a{
-  color: yellowgreen;
+  /* color: yellowgreen; */
   text-decoration: none;
 }
 
